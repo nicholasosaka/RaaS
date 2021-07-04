@@ -6,12 +6,15 @@ services:
             - "8088:8080"
         volumes:
             - ./logs:/app/logs
-            - pdfoutputs:/app/pdfoutputs
+            - texinputs:/app/texinputs
+            # - texoutputs:/app/texoutputs
     latex:
         build: latex/.
         ports:
             - "8050:8080"
         volumes:
-            - pdfoutputs:/app/pdfoutputs
+            - texinputs:/app/texinputs
+            - ./texoutputs:/app/texoutputs
 volumes:
-    pdfoutputs: {}
+    texinputs: {}
+    # texoutputs: {}
