@@ -2,7 +2,7 @@
   "name": "raas-api",
   "version": "1.0.0",
   "description": "Resume as a Service (RaaS) provides a simple interface to quickly and easily generate a PDF Resume with API calls.",
-  "main": "dist/api.js",
+  "main": "dist/app.js",
   "scripts": {
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
     "build": "tsc",
