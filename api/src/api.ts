@@ -1,13 +1,10 @@
-import dotenv from "dotenv";
 import express from 'express';
 import morgan from 'morgan';
 import { logger } from "./logger";
 
-dotenv.config(); // load .env file
-
 // API
 const api = express();
-const port = process.env.API_PORT;
+const port = 8080;
 
 const morganTokens = ':remote-addr :method :url :status :res[content-length] bytes in :response-time ms';
 api.use(morgan(morganTokens, { stream: { write: message => logger.info(message.trim()) } }))

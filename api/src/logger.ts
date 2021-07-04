@@ -1,6 +1,6 @@
 import winston from 'winston';
 
-const loggingPath = '../logs/raas_api.log';
+const loggingPath = 'logs/raas_api.log';
 
 export const logger = winston.createLogger({
     transports: [
