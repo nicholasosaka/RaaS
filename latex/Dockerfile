@@ -9,4 +9,4 @@ RUN apt-get install texlive-latex-recommended -y
 COPY . .
 EXPOSE 8080
 
-CMD ["pdflatex", "-output-directory", "./texoutputs", "./texinputs/sample_tex.tex"]
+CMD ["pdflatex", "-output-directory", "./pdfs", "./texinputs/sample_tex.tex"]

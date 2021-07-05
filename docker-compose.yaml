@@ -7,14 +7,14 @@ services:
         volumes:
             - ./logs:/app/logs
             - texinputs:/app/texinputs
-            # - texoutputs:/app/texoutputs
+            - pdfs:/app/pdfs
     latex:
         build: latex/.
         ports:
             - "8050:8080"
         volumes:
             - texinputs:/app/texinputs
-            - ./texoutputs:/app/texoutputs
+            - ./pdfs:/app/pdfs
 volumes:
     texinputs: {}
-    # texoutputs: {}
+    pdfs: {}
