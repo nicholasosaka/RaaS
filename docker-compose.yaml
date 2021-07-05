@@ -13,8 +13,9 @@ services:
         ports:
             - "8050:8080"
         volumes:
+            - ./logs:/app/logs
             - texinputs:/app/texinputs
-            - ./pdfs:/app/pdfs
+            - pdfs:/app/pdfs
 volumes:
     texinputs: {}
     pdfs: {}
