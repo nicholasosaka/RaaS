@@ -11,7 +11,7 @@ services:
     latex:
         build: latex/.
         ports:
-            - "8050:8080"
+            - "8050:8081"
         volumes:
             - ./logs:/app/logs
             - texinputs:/app/texinputs

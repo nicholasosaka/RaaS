@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from 'uuid'
 import { spawn } from 'child_process'
 
 const app = express();
-const port = 8080;
+const port = 8081;
 const texInputDir = './texinputs'
 const texOutputDir = './pdfs'
 
