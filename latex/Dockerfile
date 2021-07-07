@@ -6,13 +6,12 @@ RUN ln -snf /usr/share/zoneinfo/Etc/UTC /etc/localtime \
     && echo "Etc/UTC" > /etc/timezone \
     && apt-get update \
     && apt-get upgrade -y \
-    && apt-get install texlive-latex-base texlive-latex-extra texlive-fonts-recommended xzdec -y \
+    && apt-get install texlive-full nodejs npm -y \
     && rm -rf /var/lib/apt/lists/*
 
-RUN apt-get install nodejs npm -y
-
 # LaTeX packages
-RUN tlmgr install enumitem
+RUN tlmgr update --self 
+
 
 COPY package*.json ./
 RUN npm install
