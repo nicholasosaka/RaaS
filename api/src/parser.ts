@@ -1,7 +1,7 @@
 import * as fs from 'fs'
 import { logger } from './logger'
 
-const templateDir = './tex-templates/awesome-cv'
+const templateDir = './templates/awesome-cv'
 
 // parsing functions
 export function parse(resume: Resume): string {
